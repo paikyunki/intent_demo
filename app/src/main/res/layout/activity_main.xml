@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Call ActivityB via explicit intent"
+        android:id="@+id/button"
+        android:onClick="onButtonClick"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search Google Map"
+        android:id="@+id/btn_map"
+        android:layout_below="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:onClick="onProcess" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Download App from Market"
+        android:id="@+id/btn_market"
+        android:layout_below="@+id/btn_map"
+        android:layout_alignEnd="@+id/btn_map"
+        android:layout_alignStart="@+id/btn_map"
+        android:onClick="onProcess" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send Email"
+        android:id="@+id/btn_send_email"
+        android:layout_below="@+id/btn_market"
+        android:layout_alignStart="@+id/btn_market"
+        android:layout_alignEnd="@+id/btn_market"
+        android:onClick="onProcess" />
+
+</RelativeLayout>
