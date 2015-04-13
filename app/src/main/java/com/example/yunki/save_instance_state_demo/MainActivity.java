@@ -39,6 +39,18 @@ public class MainActivity extends Activity {
             chooser = Intent.createChooser(intent, "Download from Market");
             startActivity(chooser);
         }
+
+        if (R.id.btn_send_email == view.getId()) {
+            intent = new Intent(Intent.ACTION_SEND);
+            intent.setData(Uri.parse("mailto:"));
+            String[] to = {"yunkipaik@gmail.com", "isaac@livermorehosting.com"};
+            intent.putExtra(Intent.EXTRA_EMAIL, to);
+            intent.putExtra(Intent.EXTRA_SUBJECT, "Hello, my first email from android!");
+            intent.putExtra(Intent.EXTRA_TEXT, "This is supposed to be email message text");
+            intent.setType("message/rfc822");
+            chooser = Intent.createChooser(intent, "Send Email");
+            startActivity(chooser);
+        }
     }
     @Override
     protected void onResume() {
